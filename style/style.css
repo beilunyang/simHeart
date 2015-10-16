@@ -41,7 +41,9 @@ header li{min-width:80px;
 header li:hover{border-bottom:1px dotted #ccc;
 				padding-bottom: 0;
 }
-
+.current{border-bottom: 1px dotted #ccc;
+		padding-bottom: 0;
+}
 
 .content{margin:20px 0;}
 .content > article{width: 90%;
