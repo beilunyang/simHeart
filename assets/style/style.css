@@ -115,6 +115,7 @@ footer > p{font-size: 12px;
 }
 .markdown-content > p{padding: 20px 0;
  }
+ .markdown-content {word-wrap:break-word;}
  .markdown-content a{color: #fff;}
 .post_main > h3{text-align:center;
 			  padding-bottom: 20px;
@@ -129,6 +130,7 @@ footer > p{font-size: 12px;
 					  -moz-border-radius: 20px;
 					  border-radius: 20px;
 }
+
 
 /* ajax载入 */
 @keyframes load{
@@ -237,7 +239,12 @@ footer > p{font-size: 12px;
 #ds-thread a:hover{color:#fff !important;}
 #ds-thread #ds-reset li.ds-tab a.ds-current{border-color: #999 !important;}
 
-
+@media(max-width: 520px){
+	.post_main{width: 70%;}
+}
+@media(max-width: 420px){
+	.post_main{width: 80%;}
+}
 
 
 
