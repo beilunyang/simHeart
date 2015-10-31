@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+    	<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<meta name="description" content="{{meta_description}}">
+    	<title>{{meta_title}}</title>
+		<link rel="stylesheet" type="text/css" href="{{asset 'style/style.css'}}">
+		<link rel="shortcut icon" href="{{asset '/favicon.ico'}}" type="image/x-icon">
+		{{ghost_head}}
+    	<!--[if lt IE 9]>
+      		<script type="text/javascript" src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      		<script type="text/javascript" src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    	<![endif]-->
+  	</head>
+  	<body>
+  		<div class="ajax_load"><i class="icon-spinner"></i></div>
+  		<div class="post_main"></div>
+  		<div class="wrap"></div>
+  		<div class="close">
+			<i class="icon-cross"></i>
+		</div>
+  		<div class="container">
+	  		<header>
+	  			<div class="touxiang" style="background:url('{{@blog.logo}}') center center no-repeat;background-size: cover;">
+	  			</div>
+	  			<p>--悖论の小黑屋--</p>
+	  			{{navigation}}
+	  		</header>
+	  		{{{body}}}
+	  		<div id="pages">{{pagination.pages}}</div>
+	  		<footer>
+	  			<!-- <div class="jiyou">
+	  				<ul>
+	  					<li>友情链接:</li>
+	  					<li>
+	  						<a href="#">belun</a>
+	  					</li>
+	  					<li>
+	  						<a href="#">belun</a>
+	  					</li>
+	  					<li>
+	  						<a href="#">belun</a>
+	  					</li>
+	  					<li>
+	  						<a href="#">belun</a>
+	  					</li>
+	  				</ul>
+	  			</div> -->
+	  			{{ghost_foot}}
+	  			<p>Copyright © 2015 <a href="http://bitibiti.com">beilun</a> All Rights Reserved</p>  		
+	  		</footer>
+   		</div>
+   		<script type="text/javascript">
+			var duoshuoQuery = {short_name:"btniang"};
+		</script>
+   		<script src="{{asset 'script/embed.js'}}"></script>
+   		<script type="text/javascript" src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+   		<script type="text/javascript" src="{{asset 'script/script.js'}}"></script>
+  	</body>
+</html>

@@ -1,0 +1,22 @@
+<div class="tag">	
+	<div class="content">
+		{{#unless posts}}
+			<article>
+				<h2>没有找到相关内容</h2>
+			</article>
+		{{/unless}}
+		{{#foreach posts}}
+			<article>
+				<h2><a href="{{url}}">{{title}}</a></h2>
+				<div>{{excerpt words="30"}}
+					<span>...</span>
+					{{#if image}}
+						<div class="picture"><img src="{{image}}" alt="post_pic"></div>
+					{{/if}}
+						<div class="showmore"><a href="{{url}}">阅读全文</a></div>
+				</div>
+			</article>
+		{{/foreach}}
+	</div>
+	<div id="pages">{{pagination.pages}}</div>
+<div>

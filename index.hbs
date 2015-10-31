@@ -1,64 +1,21 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-	<head>
-    	<meta charset="utf-8">
-    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    	<meta name="viewport" content="width=device-width, initial-scale=1">
-    	<title>  </title>
-		<link rel="stylesheet" type="text/css" href="{{asset 'style/style.css'}}">
-		{{ghost_head}}
-    	<!--[if lt IE 9]>
-      		<script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      		<script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-    	<![endif]-->
-  	</head>
-  	<body>
-  		<div class="container">
-	  		<header>
-	  			<div class="touxiang">
-	  			</div>
-	  			<p>--人生苦短--</p>
-	  			{{navigation}}
-	  		</header>
-	  		<div class="content">
-	  			<article>
-	  				<h2><a href="#">关于这个theme</a></h2>
-	  				<div>这个主题非常简单，简洁实用。
-	  					<div class="picture"><img src="pic/test.jpg" /></div>
-	  					<div class="picture"><img src="pic/test.jpg" /></div>
-	  				</div>
-	  			</article>
-	  			<article>
-	  				<h2><a href="#">CSS字间距-CSS字体间距控制</a></h2>
-	  				<div>使用css来控制字与字之间距离，即css字间距方法，那么如何用CSS来控制字体间距呢？
-text-indent用来设置段落抬头距离，letter-spacing用来控制字与字间距。letter-spacing来设置字与字间距_字符间距离，字体间距css样式
-使用示例：letter-spacing:2px;
-					<div class="picture"><img src="pic/touxiang.jpg" /></div>
-					<div class="showmore"><span>--阅读全文--</span></div>
-					</div>
-	  			</article>
-	  		</div>
-	  		<footer>
-	  			<div class="jiyou">
-	  				<ul>
-	  					<li>友情链接:</li>
-	  					<li>
-	  						<a href="#">belun</a>
-	  					</li>
-	  					<li>
-	  						<a href="#">belun</a>
-	  					</li>
-	  					<li>
-	  						<a href="#">belun</a>
-	  					</li>
-	  					<li>
-	  						<a href="#">belun</a>
-	  					</li>
-	  				</ul>
-	  			</div>
-	  			<p>Copyright © 2015 beilun All Rights Reserved</p>
-	  			{{ghost_foot}}
-	  		</footer>
-   		</div>
-  	</body>
-</html>
+{{!< default}}
+
+<div class="content">
+	{{#unless posts}}
+		<article>
+			<h2>没有找到相关内容</h2>
+		</article>
+	{{/unless}}
+	{{#foreach posts}}
+		<article>
+			<h2><a href="{{url}}">{{title}}</a></h2>
+			<div>{{excerpt words="30"}}
+				<span>...</span>
+				{{#if image}}
+					<div class="picture"><img src="{{image}}" alt="post_pic"></div>
+				{{/if}}
+					<div class="showmore"><a href="{{url}}">阅读全文</a></div>
+			</div>
+		</article>
+	{{/foreach}}
+</div>

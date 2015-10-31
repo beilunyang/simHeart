@@ -1,10 +1,5 @@
 <nav>
 	<ul>
-		<li><a href="#">首页</a></li>
-		<li><a href="#">二次元</a></li>
-		<li><a href="#">三次元</a></li>
-		<li><a href="#">编谈</a></li>
-		<li><a href="#">杂感</a></li>
 		{{#foreach navigation}}
 			<li {{#if current}}class="current"{{/if}}><a href="{{url}}">{{label}}</a></li>
 		{{/foreach}}
