@@ -96,4 +96,13 @@ $(function(){
 		});
 	})();
 
+	/*返回顶部*/
+	(function(){
+		$('#backTop').click(
+			function(){
+				$('body').animate({scrollTop:0},500);
+			}
+		);
+	})();
+
 })

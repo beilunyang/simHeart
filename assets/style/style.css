@@ -7,7 +7,7 @@
 a{text-decoration: none;
   color:#333;
 }
-ul,li{list-style: none;}
+.container ul,.container li{list-style: none;}
 body{font-size: 18px;
 	line-height: 1.5;
 	font-family: 'PT serif',\5FAE\8EDF\6B63\9ED1\9AD4,\5FAE\8F6F\96C5\9ED1,\534E\6587\7EC6\9ED1,Microsoft Yahei,Hiragino Sans GB,sans-serif;
@@ -113,23 +113,18 @@ footer > p{font-size: 12px;
 		  margin: 0 auto;
 		  padding:20px 0;
 }
-.markdown-content > p{padding: 20px 0;
- }
- .markdown-content {word-wrap:break-word;}
- .markdown-content a{color: #fff;}
 .post_main > h3{text-align:center;
 			  padding-bottom: 20px;
 }
 .post_main a:hover{text-decoration: underline;}
-.post_info{font-size: 14px;text-align: center;}
+.post_info{font-size: 14px;
+			text-align: center;
+			margin-bottom: 10px;
+		}
 .post_info>span{padding: 0 20px;
 }
 .post_info a{color:#fff;}
-.markdown-content img{max-width: 100%;
-					  -webkit-border-radius: 20px;
-					  -moz-border-radius: 20px;
-					  border-radius: 20px;
-}
+
 
 
 /* ajax载入 */
@@ -218,19 +213,23 @@ footer > p{font-size: 12px;
 }
 
 .icon-spinner:before {
-	content: "\e800";
+	content: "\e901";
 }
 .icon-search:before {
-	content: "\e801";
+	content: "\e903";
 }
 .icon-cross:before {
-	content: "\e802";
+	content: "\e902";
+}
+.icon-up:before{
+	content: "\e900";
 }
 
 #pages{opacity: 0;
 	   width: 0;
 	   height: 0;
 }
+
 
 /* 自定义多说评论框 */
 #ds-thread #ds-reset .ds-comment-body p {color: #fff;}
@@ -242,9 +241,44 @@ footer > p{font-size: 12px;
 @media(max-width: 520px){
 	.post_main{width: 70%;}
 }
-@media(max-width: 420px){
+@media(max-width: 440px){
 	.post_main{width: 80%;}
 }
+@media(max-width: 390px){
+	.post_main{width: 85%}
+}
+@media(max-width: 340px){
+	.post_main{width: 90%;}
+}
+
+#backTop{
+	position: fixed;
+	color: #fff;
+	padding: 10px 14.5px;
+	bottom: 25px;
+	right:4%;
+	cursor: pointer;
+	-webkit-box-shadow: 0 0 5px 0 #333;
+	-moz-box-shadow: 0 0 5px 0 #333;
+	box-shadow: 0 0 5px 0 #333;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	background-color: #242424;
+	-webkit-transition: all .2s linear;
+	-moz-transition: all .2s linear;
+	-ms-transition: all .2s linear;
+	-o-transition: all .2s linear;
+	transition: all .2s linear;
+}
+#backTop:hover{background-color: #fff;
+			  color:#000;
+}
+
+
+
+
+
 
 
 
