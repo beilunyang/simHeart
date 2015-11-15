@@ -89,7 +89,10 @@ $(function(){
 			e.preventDefault();
 			$(window).off('scroll');
 			loadMore();
-			$.get(this.href,function(data){
+			/*https hack*/
+			var delimiter = location.host;
+			var ahref = this.href.split(delimiter)[1];
+			$.get(ahref,function(data){
 				pages = $('#pages',data).text();
 				$content.html($('.content',data).html());
 			});
